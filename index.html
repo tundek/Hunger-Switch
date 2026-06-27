@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trigger Her Sexual Hunger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color:#2a2a2a;
+    line-height:1.5;
+    background:#fff;
+  }
+  img{ max-width:100%; display:block; }
+
+  /* ===== HERO DARK SECTION ===== */
+  .hero{
+    background:linear-gradient(135deg, #8B2E1F 0%, #6e2418 35%, #3a1610 65%, #1C1A18 100%);
+    padding:36px 20px 90px;
+    position:relative;
+  }
+  .hero-inner{ max-width:880px; margin:0 auto; }
+
+  h1{
+    color:#fff;
+    font-size:36px;
+    font-weight:800;
+    line-height:1.2;
+    letter-spacing:-0.01em;
+  }
+  h1 .accent{ color:#E8A93C; }
+
+  .sub{
+    margin-top:10px;
+    font-size:15px;
+    font-weight:600;
+    color:#EAC988;
+  }
+  .sub .ul{ color:#E8A93C; text-decoration:underline; }
+
+  /* ===== TWO COLUMN ROW ===== */
+  .row{
+    display:grid;
+    grid-template-columns:1.55fr 1fr;
+    gap:20px;
+    margin-top:22px;
+    align-items:start;
+  }
+
+  /* video frame */
+  .video-frame{
+    background:#F0C75E;
+    border-radius:10px;
+    padding:10px 10px 14px;
+  }
+  .video-frame .label{
+    text-align:center;
+    font-weight:800;
+    font-size:13px;
+    color:#1a1a1a;
+    letter-spacing:.3px;
+    margin-bottom:8px;
+  }
+  .video-shot{
+    position:relative;
+    border-radius:5px;
+    overflow:hidden;
+    aspect-ratio:16/10;
+    background:linear-gradient(160deg,#2b3a4a,#3d4f5e);
+  }
+  .video-shot .person{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(60,80,100,.3), rgba(20,30,40,.5));
+  }
+  .unmute-overlay{
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:62%;
+    background:rgba(70,110,200,.55);
+    border:2px solid rgba(255,255,255,.85);
+    border-radius:6px;
+    padding:16px 14px;
+    text-align:center;
+    color:#fff;
+    backdrop-filter:blur(1px);
+  }
+  .unmute-overlay .icon{ margin-bottom:8px; display:flex; justify-content:center; }
+  .unmute-overlay .icon svg{ width:28px; height:28px; }
+  .unmute-overlay .l1{ font-weight:700; font-size:15px; }
+  .unmute-overlay .l2{ font-weight:700; font-size:15px; }
+
+  /* bonus box */
+  .bonus-box{
+    background:#fff;
+    border-radius:10px;
+    padding:16px 16px 18px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.25);
+  }
+  .bonus-box h4{
+    font-size:15px;
+    font-weight:800;
+    color:#1a1a1a;
+    margin-bottom:10px;
+  }
+  .bonus-img{
+    background:linear-gradient(160deg,#2a2a2a,#111);
+    border-radius:6px;
+    aspect-ratio:4/3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#E8A020;
+    font-size:11px;
+    font-weight:700;
+    text-align:center;
+    padding:8px;
+  }
+  .chevron{
+    text-align:center;
+    color:#E8A93C;
+    font-size:20px;
+    margin:8px 0 6px;
+  }
+  .bonus-cta{
+    display:block;
+    background:linear-gradient(180deg,#E8A93C,#D4900F);
+    color:#fff;
+    font-weight:800;
+    font-size:13px;
+    text-align:center;
+    padding:11px 8px;
+    border-radius:6px;
+    text-decoration:none;
+    line-height:1.35;
+    box-shadow:0 3px 0 #9c6b08;
+  }
+  .bonus-cta small{ display:block; font-weight:700; font-size:11.5px; margin-top:2px; }
+
+  /* ===== TESTIMONIAL BAR ===== */
+  .testi{
+    position:relative;
+    background:#2A1410;
+    border:1.5px solid #8B5A2B;
+    border-radius:8px;
+    padding:16px 30px;
+    margin-top:26px;
+    display:flex;
+    gap:14px;
+    align-items:center;
+  }
+  .testi .quote-mark{
+    position:absolute;
+    font-size:34px;
+    color:#E8A020;
+    font-family:Georgia, serif;
+    line-height:1;
+  }
+  .testi .quote-mark.top{ top:6px; left:10px; }
+  .testi .quote-mark.bot{ bottom:-2px; right:14px; }
+  .testi .avatar{
+    width:48px;height:48px;border-radius:50%;
+    background:#888;
+    flex-shrink:0;
+    border:2px solid #E8A020;
+  }
+  .testi .stars{ color:#E8A93C; font-size:13px; letter-spacing:1px; margin-bottom:4px; }
+  .testi p{ color:#e8c9b0; font-size:13.5px; font-style:italic; line-height:1.45; }
+
+  /* ===== OVERLAP WHITE CARD ===== */
+  .overlap-card{
+    max-width:760px;
+    margin:-58px auto 0;
+    background:#fff;
+    border-radius:14px 14px 0 0;
+    padding:38px 36px 10px;
+    position:relative;
+    z-index:2;
+    box-shadow:0 -6px 24px rgba(0,0,0,.06);
+  }
+  .overlap-card h2{
+    font-size:28px;
+    font-weight:800;
+    color:#1a1a1a;
+    line-height:1.25;
+    font-family: 'Inter', sans-serif;
+  }
+  .overlap-card h2 .accent{ color:#e8761a; }
+
+  .body-section{ max-width:760px; margin:0 auto; padding:0 36px 30px; }
+  .body-section p{ font-size:16px; margin-top:14px; color:#2a2a2a; }
+  .body-section p b{ font-weight:800; }
+
+  @media (max-width:640px){
+    h1{ font-size:27px; }
+    .row{ grid-template-columns:1fr; }
+    .overlap-card{ margin-top:-30px; padding:28px 22px 6px; }
+    .overlap-card h2{ font-size:22px; }
+    .body-section{ padding:0 22px 24px; }
+    .testi{ padding:14px 20px; }
+  }
+
+  /* ============================================================
+     BODY SYSTEM — cream cards / white sections
+     ============================================================ */
+  .content{ max-width:760px; margin:0 auto; padding:0 36px 60px; }
+
+  .cream-card{
+    background:#FBEFD4;
+    border-radius:14px;
+    padding:30px 32px;
+    margin:26px 0;
+  }
+  .cream-card.tight{ padding:18px 24px; margin:18px 0; }
+
+  .h-block{ font-weight:800; font-size:24px; color:#1a1a1a; text-align:center; line-height:1.3; margin-bottom:16px; }
+  .h-block.left{ text-align:left; }
+  .h-block.lg{ font-size:27px; }
+
+  .h-plain{ font-weight:800; font-size:26px; color:#1a1a1a; line-height:1.28; margin:34px 0 16px; }
+  .h-plain.center{ text-align:center; }
+
+  .body-copy p{ font-size:15px; margin-bottom:14px; color:#3a3530; }
+  .cream-card .body-copy p, .cream-card p{ color:#4a4334; }
+  .body-copy p i{ font-style:italic; }
+  .body-copy p b{ font-weight:700; color:#1a1a1a; }
+  .body-copy p .ul{ text-decoration:underline; }
+  .body-copy p .ul-b{ font-weight:700; text-decoration:underline; }
+
+  .rules-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    gap:14px 0;
+    margin:18px 0 20px;
+    text-align:center;
+  }
+  .rules-row .rule{ font-weight:700; font-size:14px; color:#1a1a1a; flex:0 0 auto; padding:0 14px; }
+  .rules-row .rule .no-icon{ color:#8B2E1F; margin-right:3px; }
+  .rules-row .divider{ width:1px; background:#D9B86A; align-self:stretch; min-height:38px; }
+
+  .inset-white{
+    background:#fff;
+    border-radius:10px;
+    padding:14px 18px;
+    margin:10px 0 18px;
+    text-align:center;
+    font-size:14.5px;
+    color:#2a2a2a;
+    box-shadow:0 1px 3px rgba(0,0,0,.08);
+  }
+  .inset-white b{ font-weight:700; }
+  .inset-white i{ font-style:italic; }
+
+  /* ============================================================
+     CURRICULUM CARDS (pink, 2-col, green check)
+     ============================================================ */
+  .curric-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin:22px 0;
+  }
+  .curric-card{
+    background:#FFF8E8;
+    border:1.5px solid #E8C988;
+    border-radius:8px;
+    padding:16px 18px;
+    box-shadow:3px 4px 0 rgba(232,169,60,.35);
+    position:relative;
+  }
+  .curric-card .check-circle{
+    display:inline-flex;
+    width:20px;height:20px;
+    background:#8B2E1F;
+    border-radius:50%;
+    color:#fff;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:900;
+    flex-shrink:0;
+    margin-right:6px;
+    vertical-align:middle;
+  }
+  .curric-card h3{
+    font-size:16px;
+    font-weight:700;
+    color:#1a1a1a;
+    display:inline;
+  }
+  .curric-card .htitle{ display:flex; align-items:flex-start; gap:7px; margin-bottom:8px; }
+  .curric-card .htitle .check-circle{ margin-top:2px; }
+  .curric-card p{ font-size:13.5px; color:#4a453e; margin:0; }
+
+  .black-check-list{ list-style:none; padding:0; margin:18px 0; }
+  .black-check-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:15px;
+    padding:7px 0;
+    color:#2a2a2a;
+  }
+  .black-check-list .dot{
+    flex-shrink:0;
+    width:19px;height:19px;
+    background:#1a1a1a;
+    border-radius:50%;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+    font-weight:900;
+    margin-top:2px;
+  }
+
+  /* ============================================================
+     GUARANTEE CARD (dark olive gradient + seal)
+     ============================================================ */
+  .guarantee-card{
+    background:radial-gradient(ellipse at 30% 0%, #6e2418 0%, #3a1610 55%, #1C1A18 100%);
+    border-radius:8px;
+    padding:60px 26px 30px;
+    text-align:center;
+    margin:46px 0 30px;
+    position:relative;
+    color:#fff;
+  }
+  .seal-badge{
+    position:absolute;
+    top:-44px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92px;height:92px;
+  }
+  .guarantee-card h2{ color:#fff; font-size:24px; }
+  .guarantee-card .h-plain{ color:#fff; }
+  .guarantee-card p{ color:#e8e4d8; font-size:14.5px; max-width:520px; margin:14px auto 0; }
+  .guarantee-card p b{ color:#fff; }
+
+  /* ============================================================
+     APP MOCK PLACEHOLDER (simplified)
+     ============================================================ */
+  .app-mock-img{
+    background:linear-gradient(160deg,#3a2a18,#1a120a);
+    border:3px solid #8a6a3a;
+    border-radius:14px;
+    max-width:260px;
+    aspect-ratio:3/4;
+    margin:24px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#d4af6a;
+    font-size:12px;
+    font-weight:700;
+    text-align:center;
+    padding:14px;
+  }
+
+  /* ============================================================
+     FINAL CTA + GUARANTEE BADGE LINE
+     ============================================================ */
+  .final-cta-wrap{ text-align:center; margin:30px 0 8px; }
+  .final-cta{
+    display:inline-block;
+    width:100%;
+    max-width:520px;
+    background:linear-gradient(180deg,#E8A93C,#D4900F);
+    color:#fff;
+    font-weight:800;
+    font-size:19px;
+    text-align:center;
+    padding:18px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    box-shadow:0 4px 0 #9c6b08;
+    line-height:1.3;
+  }
+  .final-cta small{ display:block; font-weight:700; font-size:13px; margin-top:4px; }
+  .guarantee-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:14px;
+    font-size:13.5px;
+    color:#555;
+  }
+  .guarantee-line .mini-seal{ width:24px;height:24px; }
+
+  .sign{ font-size:17px; margin-top:6px; }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer{
+    background:#1C1A18;
+    color:#b8b4a8;
+    text-align:center;
+    padding:30px 20px 36px;
+    margin-top:40px;
+    font-size:13px;
+  }
+  footer a{ color:#cfcac0; text-decoration:none; margin:0 4px; }
+  footer .sep{ color:#666; margin:0 6px; }
+  footer .copy{ margin-top:14px; color:#888; font-size:12.5px; }
+
+  @media (max-width:640px){
+    .curric-grid{ grid-template-columns:1fr; }
+    .guarantee-card{ padding:54px 20px 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HERO — DARK SECTION
+     ============================================================ -->
+<div class="hero">
+  <div class="hero-inner">
+    <h1>How to Flip Her <span class="accent">"Hunger Switch"</span> So She's Craving You Before You Even Touch Her</h1>
+    <p class="sub"><span class="ul">Without</span> trying harder, being smoother, or her ever knowing exactly what you did differently...</p>
+
+    <div class="row">
+      <!-- VIDEO COLUMN -->
+      <div class="video-frame">
+        <div class="label">PLAY VIDEO &amp; LEARN MORE</div>
+        <div class="video-shot">
+          <div class="person"></div>
+          <div class="unmute-overlay">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="white"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16.5 12c0-1.77-.77-3.29-2-4.27v8.54c1.23-.98 2-2.5 2-4.27z" /><path d="M18.5 5.14v1.79C20.34 8.16 21.5 9.95 21.5 12s-1.16 3.84-3 4.93v1.79c2.89-1.24 4.9-4.06 4.9-7.72s-2.01-6.48-4.9-7.86z"/></svg></div>
+            <div class="l1">Your Video Is Playing</div>
+            <div class="l2">Click To Unmute</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONUS COLUMN -->
+      <div class="bonus-box">
+        <h4>Full Bonus Package</h4>
+        <div class="bonus-img">PRODUCT<br>MOCKUP</div>
+        <div class="chevron">⌄</div>
+        <a href="#offer" class="bonus-cta">YES! GIVE ME ACCESS NOW<small>+ Instant Access to Bonus Cue Cards</small></a>
+      </div>
+    </div>
+
+    <div class="testi">
+      <span class="quote-mark top">"</span>
+      <div class="avatar"></div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <p>I didn't realize how much I was working against her, not with her. Within a week she was the one initiating — first time in months.</p>
+      </div>
+      <span class="quote-mark bot">"</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     OVERLAPPING WHITE CARD — PATTERN INTERRUPT
+     ============================================================ -->
+<div class="overlap-card">
+  <h2>When's the Last Time <span class="accent">She Touched You First?</span></h2>
+</div>
+<div class="body-section">
+  <p>Let me ask you something...</p>
+  <p>When's the last time she reached for you first?</p>
+  <p>Not because you asked. Not because it was your anniversary. Not because you'd been "good" all week.</p>
+  <p>Just... touched you. Because she <i>wanted</i> to.</p>
+  <p>If you have to think about it, <b>you already know the answer.</b></p>
+</div>
+
+<!-- ============================================================
+     BODY CONTENT — cream/white card system
+     ============================================================ -->
+<div class="content">
+
+  <!-- WHITE: tried everything -->
+  <div class="body-copy">
+    <div class="h-plain center">You've Tried Everything. And It's<br>Only Made Her Pull Back Further.</div>
+    <p>Here's what I already know about you:</p>
+    <p>You've tried setting the mood. Candles, music, the "right" playlist.</p>
+    <p>You've planned the perfect date — nice dinner, thoughtful gift, the whole thing.</p>
+    <p>Maybe you've given her a massage, hoping it would lead somewhere.</p>
+
+    <div class="cream-card tight" style="margin:18px 0;">
+      <p style="margin-bottom:10px;">And she either pulled away with "I'm tired"... or worse, she went along with it — but in a way that made you wish she hadn't.</p>
+      <p style="margin:0;">You know the version I mean. Going through the motions. Present in body, somewhere else in mind.</p>
+    </div>
+
+    <p>That's not a woman who's hungry for you. That's a woman who showed up because she felt she should.</p>
+    <p><b>And somehow, that feels worse than if she'd said no.</b></p>
+    <p>If you're like most of the men I work with, it almost seems like...</p>
+  </div>
+
+  <div class="h-plain center" style="margin-top:10px;">The Harder You Try, the Further<br>She Drifts...</div>
+  <div class="body-copy">
+    <p>More effort on the date. More thought into the setup. More trying to read what she wants.</p>
+    <p>One man I worked with rearranged his entire schedule trying to make her happy.</p>
+    <p>Result? Despite everything, <b>her hunger keeps dimming instead of building.</b></p>
+    <p>Every single time it's something else — she's tired, stressed, not in the mood tonight.</p>
+    <p>You plan harder. You perform harder. You try to be everything at once.</p>
+    <p>And you're rewarded with less hunger from her, not more.</p>
+  </div>
+
+  <!-- CREAM CARD 1: rant + smell your agenda -->
+  <div class="cream-card body-copy">
+    <div class="h-block">Here's What Nobody Tells You About<br>Her Hunger</div>
+    <p>So what's actually going on?</p>
+    <p>You can't <i>rush</i> a woman into wanting you.</p>
+    <p>You can't set the mood with candles. You can't earn it by trying harder.</p>
+    <p>You can't talk her into desire with the "right" plans.</p>
+    <p>Every time you try, <b>she feels it...</b></p>
+    <p>And something inside her closes instead of opens.</p>
+    <p>Not because she's cold. Not because she doesn't want you.</p>
+
+    <div class="h-block lg" style="margin-top:30px;">She Can Feel You Trying</div>
+    <p>And that's the problem with the candles, the playlist, the "setting the mood" checklist...</p>
+    <p>She can feel exactly what you're working toward, and it makes things worse...</p>
+    <p><span class="ul-b">Because desire doesn't work that way.</span></p>
+    <p>It's not a destination you arrive at by following steps in front of her.</p>
+    <p>The more obvious the effort, the less she wants to meet it.</p>
+  </div>
+
+  <!-- PLAIN WHITE: the real reason -->
+  <div class="body-copy">
+    <div class="h-plain center">The Real Reason She's Not<br>Hungry for You (And How to Get<br>It Back)</div>
+    <p>So what actually works?</p>
+    <p>After 18 years of conversations with women about exactly this — the ones they only have with each other, never with their partners — I found the pattern.</p>
+    <p><b>Her hunger isn't built in the bedroom. It's built hours before you ever get there</b> — or it never gets built at all.</p>
+    <p>Maybe you've sensed it. Maybe you haven't. <b>It doesn't matter.</b></p>
+    <p><b>What matters is this:</b> most men spend all their energy on the final 10 minutes — and completely miss the window where her desire was actually forming, or quietly dying.</p>
+  </div>
+
+  <!-- CREAM CARD 2: small punch statement -->
+  <div class="cream-card tight body-copy">
+    <p style="margin:0;">And it's impossible for hunger to build while she's stuck waiting on you to make the first real move.</p>
+  </div>
+
+  <!-- CREAM CARD 3: mechanism reveal with rules row + nested inset -->
+  <div class="cream-card body-copy">
+    <div class="h-block">And once you understand the rules?<br><span class="h-block lg" style="display:block; margin-top:4px;">Everything Changes.</span></div>
+
+    <div class="rules-row">
+      <div class="rule"><span class="no-icon">⊘</span>You can't<br>rush her into it.</div>
+      <div class="divider"></div>
+      <div class="rule"><span class="no-icon">⊘</span>You stop<br>"setting" the mood.</div>
+      <div class="rule" style="flex-basis:100%; padding-top:14px;"><span class="no-icon">⊘</span>You stop<br>asking her for it.</div>
+    </div>
+
+    <div class="inset-white">
+      <b>You build it with "anticipation triggers"</b> — <i>signals her body is wired to respond to, whether she notices or not.</i>
+    </div>
+
+    <p>The more of these signals you send, the more her body is already leaning toward you by the time you're alone.</p>
+    <p>And when that happens?</p>
+    <p><b>Hunger comes back <span class="ul">automatically</span>.</b></p>
+  </div>
+
+  <!-- PLAIN WHITE: the hunger switch reveal -->
+  <div class="body-copy">
+    <div class="h-plain center">It's Something Called "The Hunger Switch"</div>
+    <p>I call this <b>The Hunger Switch.</b></p>
+    <p>When it's off — and for most men, it's been off for years — nothing you do will work. Not the effort. Not the talks. Not the romantic gestures.</p>
+    <p>When it's on?</p>
+    <p>She responds to you like she used to. Automatically. Without you having to ask.</p>
+    <p><b>And the best part?</b></p>
+    <p>She won't know why. She'll just start feeling something again.</p>
+    <p>Touching you more. Looking at you differently. Initiating things she hasn't initiated in years.</p>
+    <p>She'll say things like, <i>"I don't know what's gotten into me"</i> or <i>"You seem different lately."</i></p>
+    <p>She can't explain it. She just feels it.</p>
+    <p><b>She'll think it was <i>her</i> idea.</b></p>
+  </div>
+
+  <!-- CREAM CARD 4: testimonials -->
+  <div class="cream-card body-copy">
+    <div class="h-block lg">Here's What Happens When Men<br>Flip This Switch:</div>
+    <p>I know this might sound too simple. So let me show you what happens when men flip this switch:</p>
+
+    <p style="margin-top:18px;"><b>Bryan, married 17 years:</b></p>
+    <p><i>"I thought I knew my wife sexually — I didn't. I put your directions into practice and it has unlocked her. She is responding exactly as described. Our sex life is on a completely different planet now."</i></p>
+
+    <p style="margin-top:18px;"><b>James, married 30 years:</b></p>
+    <p><i>"Thanks to this, we've had the best sex we've ever had. Thirty years in. And it changed — fast."</i></p>
+
+    <p style="margin-top:18px;"><b>Adam:</b></p>
+    <p><i>"My wife was bragging to her friends — saying I was the best she's ever had. I didn't change who I am. I just stopped missing the window."</i></p>
+  </div>
+
+  <!-- PRODUCT INTRO -->
+  <div class="body-copy" id="offer">
+    <p class="center">I put everything I know about this into a short video training called:</p>
+    <div class="h-plain center" style="font-size:28px;">Trigger Her Sexual Hunger</div>
+    <div class="app-mock-img" style="aspect-ratio:16/10; max-width:340px;">PRODUCT MOCKUP<br>5-VIDEO TRAINING</div>
+    <p>This isn't a script to memorize. It's not "set the mood" advice you've already tried.</p>
+    <p>It's a playbook. For you. That works without her noticing, without another conversation, and without her ever knowing you're doing anything different.</p>
+
+    <p style="font-weight:700; margin-top:24px;">Inside, you'll discover:</p>
+
+    <div class="curric-grid">
+      <div class="curric-card">
+        <div class="htitle"><span class="check-circle">✓</span><h3>The Hunger Switch</h3></div>
+        <p>Why her desire doesn't work like yours — and the moment most men start working against her wiring without knowing it. (Video 1)</p>
+      </div>
+      <div class="curric-card">
+        <div class="htitle"><span class="check-circle">✓</span><h3>The First Hour Rule</h3></div>
+        <p>The specific window where hunger actually begins — and the small habit that builds it instead of resetting her to zero. (Video 2)</p>
+      </div>
+      <div class="curric-card">
+        <div class="htitle"><span class="check-circle">✓</span><h3>Words That Build Heat</h3></div>
+        <p>The exact kind of statement that makes her feel seen, not just looked at — and the texting mistake that kills anticipation. (Video 3)</p>
+      </div>
+      <div class="curric-card">
+        <div class="htitle"><span class="check-circle">✓</span><h3>Touch Before Touch</h3></div>
+        <p>Why touch that isn't aimed at sex builds more hunger than touch that is — and the "approach and retreat" pattern women describe as magnetic. (Video 4)</p>
+      </div>
+      <div class="curric-card">
+        <div class="htitle"><span class="check-circle">✓</span><h3>Bringing It Together</h3></div>
+        <p>A simple walkthrough of an entire evening using everything above, so you know exactly when to do what. (Video 5)</p>
+      </div>
+      <div class="curric-card">
+        <div class="htitle"><span class="check-circle">✓</span><h3>The Anticipation Cue Cards</h3></div>
+        <p>6 quick-glance cards — one per video plus a 30-second pre-date check — so you're not trying to recall everything from memory. (Bonus)</p>
+      </div>
+    </div>
+
+    <p style="font-weight:700; margin-top:22px;">Plus:</p>
+    <ul class="black-check-list">
+      <li><span class="dot">✓</span>Why she'd rather feel teased than entertained (and how to use this)</li>
+      <li><span class="dot">✓</span>What's actually happening when she says "I'm just tired"</li>
+      <li><span class="dot">✓</span>The one thing most men do in the first 5 minutes that quietly kills the whole night</li>
+      <li><span class="dot">✓</span>Why "setting the mood" right before isn't the same as building hunger over hours</li>
+      <li><span class="dot">✓</span>The real reason your effort isn't landing — and what she's actually responding to instead</li>
+    </ul>
+
+    <p style="margin-top:16px;">Instant access. Start watching tonight.</p>
+    <p>No fluff. No generic "be more romantic" advice.</p>
+    <p>Just specific, practical moves you can use immediately.</p>
+  </div>
+
+  <!-- PRICE (inline, plain) -->
+  <div class="body-copy">
+    <div class="h-plain center">All for Less Than One Date Night<br>Drink</div>
+    <p>Men spend hundreds on a "perfect" date hoping it leads somewhere, with no idea why it sometimes does and sometimes doesn't.</p>
+    <p>This training is <b>$27</b>.</p>
+    <p>Less than what you'd spend trying to set the mood the old way — one more time, hoping it works.</p>
+    <p>And unlike chasing the mood yourself, you don't need her participation. You don't need her permission. You don't even need to tell her.</p>
+  </div>
+
+  <!-- GUARANTEE CARD -->
+  <div class="guarantee-card">
+    <svg class="seal-badge" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="goldg" cx="35%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="#ffe27a"/>
+          <stop offset="60%" stop-color="#d4a017"/>
+          <stop offset="100%" stop-color="#a87810"/>
+        </radialGradient>
+      </defs>
+      <path d="M50 2 L58 10 L69 7 L72 18 L83 21 L80 32 L88 40 L80 48 L83 59 L72 62 L69 73 L58 70 L50 78 L42 70 L31 73 L28 62 L17 59 L20 48 L12 40 L20 32 L17 21 L28 18 L31 7 L42 10 Z" fill="url(#goldg)" stroke="#8a5e0c" stroke-width="1"/>
+      <circle cx="50" cy="40" r="24" fill="#1a1208" stroke="#d4a017" stroke-width="2"/>
+      <text x="50" y="33" text-anchor="middle" fill="#f0c14b" font-size="7" font-weight="800" font-family="Inter,sans-serif">30 DAY</text>
+      <text x="50" y="44" text-anchor="middle" fill="#fff" font-size="9" font-weight="800" font-family="Inter,sans-serif">MONEY</text>
+      <text x="50" y="54" text-anchor="middle" fill="#fff" font-size="9" font-weight="800" font-family="Inter,sans-serif">BACK</text>
+    </svg>
+    <div class="h-plain center" style="margin-top:0;">See a Shift in 30 Days — Or<br>Get Your Money Back</div>
+    <p><b>My guarantee:</b></p>
+    <p>Listen to the whole thing. Try what you learn.</p>
+    <p>If you don't notice a shift in how she responds to you within 30 days — or if you just think it's not for you — email me and I'll refund every penny.</p>
+    <p>No questions. No hassle.</p>
+    <p>Either it works, or you get your money back.</p>
+  </div>
+
+  <!-- BONUS DELIVERY -->
+  <div class="body-copy">
+    <div class="h-plain center">Here's How We'll Make Sure You<br>Actually Do It...</div>
+    <div class="app-mock-img">ANTICIPATION<br>CUE CARDS<br>APP MOCKUP</div>
+    <p>Now here's the thing — it's one thing to learn this stuff. It's another to actually use it.</p>
+    <p>So when you grab the training, you're also getting free access to the Anticipation Cue Cards.</p>
+    <p>This isn't some PDF you'll never open. It's a tool that tells you exactly what to focus on — and when.</p>
+    <p>It gives you the specific cues. Word-for-word examples.</p>
+    <p>You just glance at the card before you see her, <b>and know exactly what to put into action that night.</b></p>
+    <p>The videos give you the understanding. The cards make sure you actually use it.</p>
+  </div>
+
+  <!-- TWO CHOICES -->
+  <div class="cream-card body-copy">
+    <div class="h-block lg">You Have Two Choices Right Now</div>
+    <p>Look. I know where you're at.</p>
+    <p>You're exhausted. You've tried everything. Part of you has already accepted that this is just how it is now.</p>
+    <p>But there's another part — the part still reading this — that isn't ready to give up.</p>
+    <p>That part remembers what it felt like to be wanted. To be touched without asking. To have her look at you like you were the only man in the room.</p>
+    <p>You can have that again.</p>
+    <p>Not by trying harder. Not by having another conversation. Not by becoming someone you're not.</p>
+    <p>By becoming the man she fell for in the first place.</p>
+    <p><b>Choice 1: Close this page.</b></p>
+    <p>Go back to setting the mood the same way. Keep hoping tonight is different. Keep wondering if this is really it.</p>
+    <p><b>Choice 2: Click below.</b></p>
+    <p>Get instant access to Trigger Her Sexual Hunger.</p>
+    <p>Start watching tonight — while she's asleep, while you're driving, whenever.</p>
+    <p>And within days, see the first crack in the wall she's built. A lingering look. An unexpected touch. A warmth that's been missing for years.</p>
+    <p>Not because you begged for it.</p>
+    <p>Because you finally showed up as the man she's been waiting for.</p>
+  </div>
+
+  <div class="final-cta-wrap">
+    <a href="#offer" class="final-cta">YES! GIVE ME ACCESS NOW<small>& Instant Access to Bonus Cue Cards</small></a>
+    <div class="guarantee-line">
+      <svg class="mini-seal" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="goldg2" cx="35%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#ffe27a"/>
+            <stop offset="60%" stop-color="#d4a017"/>
+            <stop offset="100%" stop-color="#a87810"/>
+          </radialGradient>
+        </defs>
+        <path d="M50 2 L58 10 L69 7 L72 18 L83 21 L80 32 L88 40 L80 48 L83 59 L72 62 L69 73 L58 70 L50 78 L42 70 L31 73 L28 62 L17 59 L20 48 L12 40 L20 32 L17 21 L28 18 L31 7 L42 10 Z" fill="url(#goldg2)" stroke="#8a5e0c" stroke-width="1"/>
+        <circle cx="50" cy="40" r="24" fill="#1a1208" stroke="#d4a017" stroke-width="2"/>
+      </svg>
+      <span>30 Day Money Back Guarantee</span>
+    </div>
+  </div>
+
+  <!-- SIGNOFF -->
+  <div class="body-copy" style="margin-top:26px;">
+    <p>30-day guarantee. Instant access. She never needs to know.</p>
+    <p class="sign">— Arica</p>
+    <p style="margin-top:14px;"><b>P.S.</b> — You're not crazy for wanting to be wanted. You're not asking for too much by wishing she reached for you first.</p>
+    <p>And you don't have to accept "roommates" as the rest of your life.</p>
+    <p><b>P.P.S.</b> — That voice telling you "nothing will work"?</p>
+    <p>That's the same voice that told you to try harder, set the mood, perform more.</p>
+    <p>Look where that got you.</p>
+    <p>Maybe it's time to try something different.</p>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div>
+    <a href="#">About Arica</a><span class="sep">|</span>
+    <a href="#">Privacy Policy</a><span class="sep">|</span>
+    <a href="#">Terms &amp; Conditions</a><span class="sep">|</span>
+    <a href="#">More From Arica</a><span class="sep">|</span>
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="copy">© Trigger Her Sexual Hunger</div>
+</footer>
+
+</body>
+</html>
